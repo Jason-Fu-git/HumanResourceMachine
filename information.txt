@@ -1,0 +1,18 @@
+1
+让机器人取出输入序列上的每个积木放入输出序列中。
+1 2
+1 2
+0
+inbox outbox
+2
+对于输入序列中的每两个东西，先把第 1 个减去第 2 个，并把结果放在输出序列中，然后把第 2 个减去第 1 个，再把结果放在输出序列中，重复。
+3 9 5 1 -2 -2 9 -9
+-6 6 4 -4 0 0 18 -18
+3
+inbox outbox copyfrom copyto add sub jump jumpifzero
+3
+从输入序列中依次取 2 个数字，如果相等则将其中一个输出，否则扔掉。重复这个过程直到输入传送带为空。
+6 2 7 7 -9 3 -3 -3
+7 -3
+3
+inbox outbox copyfrom copyto add sub jump jumpifzero
